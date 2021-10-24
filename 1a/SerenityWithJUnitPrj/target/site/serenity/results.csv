@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Sign up test","Create account","SUCCESS","2021-10-25T01:41:50.576691068+03:00[Europe/Bucharest]","0.0","107.95"
+"Sign up test","Log in","SUCCESS","2021-10-25T01:43:38.81931025+03:00[Europe/Bucharest]","0.0","6.88"
+"Wish list test","Add product to wish list","ERROR","2021-10-25T01:46:34.104262164+03:00[Europe/Bucharest]","0.0","82.56"

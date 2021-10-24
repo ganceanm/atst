@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="SerenityWithJUnit.features.wishlist.WishListTest" skipped="0" tests="1" time="82.56" timestamp="2021-10-25 01:46:34"><testcase classname="SerenityWithJUnit.features.wishlist.WishListTest" name="Add product to wish list"><error message="Timed out after 2 seconds. Element not found&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'hp-omen', ip: '192.168.0.175', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-77-generic', java.version: '15.0.2'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'hp-omen', ip: '192.168.0.175', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-77-generic', java.version: '15.0.2'
+Driver info: driver.version: unknown</error><system-err>Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'hp-omen', ip: '192.168.0.175', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-77-generic', java.version: '15.0.2'
+Driver info: driver.version: unknown
+SerenityWithJUnit.pages.WishListPage.getWishListProductsName(WishListPage.java:23)
+SerenityWithJUnit.steps.serenity.WishListSteps.should_see_product_in_wish_list(WishListSteps.java:18)
+SerenityWithJUnit.features.wishlist.WishListTest.addProductToWishList(WishListTest.java:50)
+</system-err></testcase></testsuite>

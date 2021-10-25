@@ -31,10 +31,10 @@ public class CreateAccountPage extends PageObject {
     @FindBy(id = "is_subscribed")
     private WebElementFacade isSubscribed;
 
-    @FindBy(xpath  = "//button[contains(.,'Register')]")
+    @FindBy(xpath = "//button[contains(.,'Register')]")
     private WebElementFacade createButton;
 
-    public Boolean isCreateAccountPage(){
+    public Boolean isCreateAccountPage() {
         return createAccount.waitUntilVisible().isVisible();
     }
 
@@ -57,7 +57,7 @@ public class CreateAccountPage extends PageObject {
         isSubscribed.waitUntilClickable().click();
     }
 
-    public void clickCreateButton(){
+    public void clickCreateButton() {
         createButton.waitUntilClickable().click();
     }
 

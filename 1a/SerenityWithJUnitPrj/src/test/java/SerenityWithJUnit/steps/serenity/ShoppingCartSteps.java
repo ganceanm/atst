@@ -13,18 +13,19 @@ public class ShoppingCartSteps extends PageObject {
     ShoppingCartPage shoppingCartPage;
 
     @Step
-    public void should_see_product_in_shopping_cart(String productName){
+    public void shouldSeeProductInShoppingCart(String productName) {
 
         Assert.assertThat(shoppingCartPage.getShoppingCartProductsName(), Matchers.hasItem(Matchers.containsString(productName)));
     }
 
     @Step
-    public void remove_product_from_shopping_cart(WebDriver webdriver){
-        shoppingCartPage.remove_product_from_shopping_cart(webdriver);
+    public void removeProductFromShoppingCart(WebDriver webdriver) {
+        shoppingCartPage.removeProductFromShoppingCart(webdriver);
 
     }
+
     @Step
-    public void should_see_no_removable_product_left(){
-        Assert.assertEquals(false, shoppingCartPage.is_remove_product_from_cart_present());
+    public void shouldSeeNoRemovableProductLeft() {
+        Assert.assertEquals(false, shoppingCartPage.isRemoveProductFromCartPresent());
     }
 }

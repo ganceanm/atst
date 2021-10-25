@@ -1,10 +1,8 @@
 
 @Narrative(
-        title = "Search for definitions",
-        text = {"In order to impress people",
-                "As a party goer",
-                "I want to be able to look up the meaning of unusual and impressive words"},
-        cardNumber = "#123"
+        title = "Add new item to cart",
+        text = {"I want to be able add a new item from the 'New' category to the cart from the home page."},
+        cardNumber = "#3"
 )
 package SerenityWithJUnit.features.cart;
 

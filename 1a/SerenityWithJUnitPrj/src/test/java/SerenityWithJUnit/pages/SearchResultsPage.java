@@ -10,7 +10,7 @@ public class SearchResultsPage extends PageObject {
     private WebElementFacade searchTermHeading;
 
 
-    public String get_search_results_page_term(){
+    public String getSearchResultsPageTerm() {
         return searchTermHeading.getText();
     }
 }

@@ -25,22 +25,13 @@ public class HeaderPage extends PageObject {
     @FindBy(partialLinkText = "My Account")
     private WebElementFacade accountLink;
 
-    public Boolean my_account_is_visible() {
-        return accountButton.waitUntilVisible().isVisible();
-    }
-
-    public Boolean my_cart_is_visible() {
-        return cart.waitUntilVisible().isVisible();
-    }
-
-
     @FindBy(id = "search")
     private WebElementFacade searchBox;
 
     @FindBy(className = "search-button")
     private WebElementFacade searchButton;
 
-    public void type_keyword(String keyword) {
+    public void typeKeyword(String keyword) {
         searchBox.type(keyword);
     }
 
@@ -51,7 +42,7 @@ public class HeaderPage extends PageObject {
 
 
 
-    public void go_to_cart() {
+    public void goToCart() {
         cart.waitUntilClickable().click();
     }
 

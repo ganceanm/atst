@@ -9,7 +9,7 @@ public class DashboardSteps {
     DashboardPage dashboardPage;
 
     @Step
-    public void checkIfLoginSuccessful(){
+    public void checkIfLoginSuccessful() {
         Assert.assertEquals(true, dashboardPage.isOnDashboard());
     }
 }

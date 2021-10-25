@@ -9,7 +9,7 @@ public class NavigationSteps {
 
 
     @Step
-    public void navigate_to_homepage(){
+    public void navigateToHomepage() {
         navigationPage.open();
     }
 }

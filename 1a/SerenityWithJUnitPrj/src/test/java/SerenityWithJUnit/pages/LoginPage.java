@@ -10,7 +10,7 @@ import net.thucydides.core.pages.PageObject;
 @DefaultUrl(Constants.url)
 public class LoginPage extends PageObject {
 
-    @FindBy(xpath  = "//a[contains(.,'Create an Account')]")
+    @FindBy(xpath = "//a[contains(.,'Create an Account')]")
     private WebElementFacade createButton;
 
     @FindBy(id = "email")
@@ -26,7 +26,7 @@ public class LoginPage extends PageObject {
         createButton.waitUntilClickable().click();
     }
 
-    public void fillForm(){
+    public void fillForm() {
         email.waitUntilClickable().click();
         email.type(Constants.email);
 
@@ -34,7 +34,7 @@ public class LoginPage extends PageObject {
         password.type(Constants.password);
     }
 
-    public void clickLogin(){
+    public void clickLogin() {
         loginButton.waitUntilClickable().click();
     }
 }

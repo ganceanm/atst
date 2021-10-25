@@ -37,7 +37,7 @@ public class SignUpTest {
 
     @Test
     public  void createAccount(){
-        navigationSteps.navigate_to_homepage();
+        navigationSteps.navigateToHomepage();
         headerSteps.navigateToAccount();
         loginSteps.clickCreateAccount();
         createAccountSteps.fillForm();
@@ -47,7 +47,7 @@ public class SignUpTest {
 
     @Test
     public void logIn(){
-        navigationSteps.navigate_to_homepage();
+        navigationSteps.navigateToHomepage();
         headerSteps.navigateToAccount();
         loginSteps.fillLoginForm();
         loginSteps.logIn();

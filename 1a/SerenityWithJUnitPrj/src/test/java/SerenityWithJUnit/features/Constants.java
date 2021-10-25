@@ -11,7 +11,7 @@ public class Constants {
 
     public static final String lastName = "Joe";
 
-    public static final String email = "test3@test.com";
+    public static final String email = "test4@test.com";
 
     public static final String password = "apple123";
 }

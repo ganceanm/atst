@@ -11,30 +11,26 @@ import java.util.stream.Collectors;
 
 public class WishListPage extends PageObject {
 
-
-    @FindBy(css = ".block block-cart")
-    private WebElementFacade modal;
-
     @FindBy(id = "wishlist-table")
     private WebElementFacade productsElementsContainer;
-    //*[@id="item_248"]/td[2]/h3
-    public List<String> getWishListProductsName(){//*[@id="item_248"]/td[2]/h3/a
-        WebElementFacade items = find("//*[@id='wishlist-table']");
+
+    public List<String> getWishListProductsName() {
         productsElementsContainer.waitUntilVisible();
-        return productsElementsContainer.findElements(By.cssSelector(".product-name, h3")).stream().map(element->element.getText().toLowerCase()).collect(Collectors.toList());
+        return productsElementsContainer.findElements(By.cssSelector(".product-name, h3")).stream().map(element -> element.getText().toLowerCase()).collect(Collectors.toList());
     }
 
-    @FindBy(css = "block block-cart, a.remove")
-    private WebElementFacade removeProductCardButton;
+    @FindBy(css = ".btn-remove")
+    private WebElementFacade removeProductButton;
 
-    public void remove_product_from_shopping_cart(WebDriver webdriver){
-        removeProductCardButton.waitUntilVisible().click();
+    public void removeItemFromWishList(WebDriver webdriver) {
+        removeProductButton.waitUntilVisible().click();
 
         webdriver.switchTo().alert().accept();
         waitABit(2000);
 
     }
-    public Boolean is_remove_product_from_cart_present(){
-        return removeProductCardButton.isVisible();
+
+    public Boolean isRemoveFromWishListPresent() {
+        return removeProductButton.isVisible();
     }
 }

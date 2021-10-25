@@ -12,14 +12,14 @@ public class ProductsPage extends PageObject {
     private WebElementFacade productData;
 
 
-    @FindBy(css=".link-wishlist")
+    @FindBy(css = ".link-wishlist")
     private WebElementFacade buttonAddToWishList;
 
-    public Boolean isProductsPage(){
+    public Boolean isProductsPage() {
         return productData.waitUntilVisible().isVisible();
     }
 
-    public void addToWishList(){
+    public void addToWishList() {
         productData.waitUntilClickable();
 
         buttonAddToWishList.waitUntilClickable().click();

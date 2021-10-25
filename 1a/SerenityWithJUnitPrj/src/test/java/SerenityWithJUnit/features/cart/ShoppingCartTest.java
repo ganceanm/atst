@@ -1,22 +1,22 @@
 package SerenityWithJUnit.features.cart;
 
 
-
 import SerenityWithJUnit.steps.serenity.*;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
-import org.springframework.core.annotation.Order;
 
 @RunWith(SerenityRunner.class)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ShoppingCartTest {
 
     @Managed(uniqueSession = true)
     WebDriver webdriver;
-
 
     @Steps
     NavigationSteps navigationSteps;
@@ -34,19 +34,19 @@ public class ShoppingCartTest {
     ShoppingCartSteps shoppingCartSteps;
 
 
-    @Test @Order(1)
+    @Test
     public  void addToCartNewProduct(){
-        navigationSteps.navigate_to_homepage();
+        navigationSteps.navigateToHomepage();
         homeSteps.clickProductName();
-        productSteps.add_first_product_to_cart();
-        headerSteps.navigate_to_shopping_cart();
-        shoppingCartSteps.should_see_product_in_shopping_cart("linen blazer");
+        productSteps.addFirstProductToCart();
+        headerSteps.navigateToShoppingCart();
+        shoppingCartSteps.shouldSeeProductInShoppingCart("linen blazer");
     }
-    @Test @Order (2)
+    @Test
     public void removeProductFromCart(){
         addToCartNewProduct();
-        shoppingCartSteps.remove_product_from_shopping_cart(webdriver);
-        shoppingCartSteps.should_see_no_removable_product_left();
+        shoppingCartSteps.removeProductFromShoppingCart(webdriver);
+        shoppingCartSteps.shouldSeeNoRemovableProductLeft();
 
 
     }

@@ -13,7 +13,7 @@ public class DashboardPage extends PageObject {
     @FindBy(css = ".my-account")
     private WebElementFacade myAccount;
 
-    public Boolean isOnDashboard(){
+    public Boolean isOnDashboard() {
         return myAccount.waitUntilVisible().isVisible();
     }
 }

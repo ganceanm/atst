@@ -16,7 +16,7 @@ public class ProductPage extends PageObject {
     @FindBy(css = ".add-to-cart")
     private WebElementFacade buttonAddToCart;
 
-    public void add_to_cart() {
+    public void addToCart() {
 
         sizeField.waitUntilClickable().click();
         colorField.waitUntilClickable().click();

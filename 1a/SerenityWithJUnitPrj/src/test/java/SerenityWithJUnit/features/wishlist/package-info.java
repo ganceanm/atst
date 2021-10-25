@@ -1,10 +1,8 @@
 
 @Narrative(
-        title = "Search for definitions",
-        text = {"In order to impress people",
-                "As a party goer",
-                "I want to be able to look up the meaning of unusual and impressive words"},
-        cardNumber = "#123"
+        title = "Add item to Wishlist",
+        text = {"I want to be able to add and remove a single item to and from the wishlist"},
+        cardNumber = "#2"
 )
 package SerenityWithJUnit.features.wishlist;
 

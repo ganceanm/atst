@@ -1,7 +1,6 @@
 package SerenityWithJUnit.features.wishlist;
 
 
-
 import SerenityWithJUnit.features.Constants;
 import SerenityWithJUnit.steps.serenity.*;
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -12,7 +11,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
-import org.springframework.core.annotation.Order;
 
 @RunWith(SerenityRunner.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -40,26 +38,25 @@ public class WishListTest {
     WishListSteps wishListSteps;
 
 
-    @Test @Order(1)
+    @Test
     public  void addProductToWishList(){
         logIn();
-        navigationSteps.navigate_to_homepage();
-        headerSteps.search_product(Constants.productName);
+        navigationSteps.navigateToHomepage();
+        headerSteps.searchProduct(Constants.productName);
         productsSteps.addFirstProductToWishList();
         headerSteps.navigateToWishList();
-        wishListSteps.should_see_product_in_wish_list(Constants.productName);
+        wishListSteps.shouldSeeProductInWishList(Constants.productName);
     }
-//    @Test @Order (2)
-//    public void removeProductFromWishList(){
-//        addProductToWishList();
-//        wishListSteps.remove_product_from_shopping_cart(webdriver);
-//        wishListSteps.should_see_no_removable_product_left();
-//
-//
-//    }
+    @Test
+    public void removeProductFromWishList(){
+        addProductToWishList();
+        wishListSteps.removeProductFromWishList(webdriver);
+        wishListSteps.shouldSeeNoRemovableProductLeft();
+
+    }
 
     private void logIn(){
-        navigationSteps.navigate_to_homepage();
+        navigationSteps.navigateToHomepage();
         headerSteps.navigateToAccount();
         loginSteps.fillLoginForm();
         loginSteps.logIn();

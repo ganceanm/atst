@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Wish list test","Add product to wish list","SUCCESS","2021-10-25T03:30:52.121301299+03:00[Europe/Bucharest]","0.0","24.13"
+"Wish list test","Remove product from wish list","SUCCESS","2021-10-25T03:31:16.473495936+03:00[Europe/Bucharest]","0.0","27.33"

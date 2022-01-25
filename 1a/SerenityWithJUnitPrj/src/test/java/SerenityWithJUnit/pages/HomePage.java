@@ -12,9 +12,29 @@ public class HomePage extends PageObject {
     @FindBy(css = ".product-name")
     private WebElementFacade productButton;
 
+    @FindBy(id = "newsletter")
+    private WebElementFacade newsletterInput;
+
+    @FindBy(id = "newsletter-validate-detail")
+    private WebElementFacade newsletterForm;
+
+    @FindBy(className = "success-msg")
+    private WebElementFacade successMessage;
+
     public void openProductPage() {
         productButton.waitUntilClickable();
         productButton.click();
+    }
+
+    public void subscribe(String mail){
+        newsletterForm.waitUntilVisible();
+        newsletterInput.waitUntilClickable();
+        newsletterInput.type(mail);
+        newsletterForm.submit();
+    }
+
+    public Boolean isSuccessMessagePresent(){
+        return successMessage.isVisible();
     }
 
 }

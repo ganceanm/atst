@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="SerenityWithJUnit.features.auth.SignUpTest" skipped="0" tests="2" time="22.21" timestamp="2021-10-25 03:30:22"><testcase classname="SerenityWithJUnit.features.auth.SignUpTest" name="Create account"/><testcase classname="SerenityWithJUnit.features.auth.SignUpTest" name="Log in"/></testsuite>
